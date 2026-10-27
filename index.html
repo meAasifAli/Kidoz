@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kidoz Kids Fashion | Trendy & Skin-Friendly Children's Clothing</title>
+  <meta name="description" content="Shop adorable, breathable, premium kids clothing at Kidoz Kids Fashion (@kidozkidsfashion). Co-ord sets, party frocks, festive kurtas and casual wear for 0-12 years. Direct WhatsApp order available." />
+
+  <!-- Favicon icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧸</text></svg>">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       1. ANNOUNCEMENT BAR
+       ========================================== -->
+  <div class="announcement-bar">
+    <div class="announcement-inner">
+      <div class="announcement-text">
+        <i class="fas fa-gift"></i>
+        <span>🎉 Special Offer: <strong>FREE Delivery</strong> on orders over ₹999 | Code: <strong>KIDOZ10</strong> for 10% OFF</span>
+      </div>
+      <div class="announcement-links">
+        <a href="https://wa.me/919891138821" target="_blank" class="announcement-link">
+          <i class="fab fa-whatsapp"></i> Order on WhatsApp: +91 98911 38821
+        </a>
+        <a href="https://www.instagram.com/kidozkidsfashion?utm_source=qr&exln=YjMzd2YyMmszd2Iz" target="_blank" class="announcement-link">
+          <i class="fab fa-instagram"></i> @kidozkidsfashion
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       2. SITE HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo">
+        <div class="logo-badge">
+          <i class="fas fa-child"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">kidoz<span>.</span></span>
+          <span class="brand-tagline">Kids Fashion</span>
+        </div>
+      </a>
+
+      <!-- Instant Search Bar -->
+      <div class="header-search">
+        <div class="search-input-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search dresses, co-ord sets, rompers, linen..." />
+        </div>
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <nav class="header-nav">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#catalog" class="nav-link">Shop All</a>
+        <a href="#catalog" class="nav-link" onclick="selectCategoryTab('girls')">Girls</a>
+        <a href="#catalog" class="nav-link" onclick="selectCategoryTab('boys')">Boys</a>
+        <a href="#catalog" class="nav-link" onclick="selectCategoryTab('coord-sets')">Co-ord Sets <span class="badge-hot">Hot</span></a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Direct WhatsApp CTA Button -->
+        <a href="https://wa.me/919891138821?text=Hi%20Kidoz%20Kids%20Fashion!%20I'm%20visiting%20your%20website%20and%20need%20help%20with%20an%20order." target="_blank" class="btn-header-whatsapp" title="Chat with Kidoz on WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+
+        <!-- Cart Button -->
+        <button class="action-icon-btn cart-toggle-btn" title="View Shopping Cart" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Slide-In Navigation -->
+  <div class="cart-drawer-backdrop" id="navBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNav">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="#" class="brand-logo">
+        <div class="logo-badge" style="width: 36px; height: 36px; font-size: 1.1rem;">
+          <i class="fas fa-child"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name" style="font-size: 1.35rem;">kidoz<span>.</span></span>
+        </div>
+      </a>
+      <button class="close-drawer-btn" id="closeNavBtn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <a href="#hero" class="mobile-nav-link">Home <i class="fas fa-angle-right"></i></a>
+      <a href="#catalog" class="mobile-nav-link" onclick="selectCategoryTab('all')">Shop All Outfits <i class="fas fa-angle-right"></i></a>
+      <a href="#catalog" class="mobile-nav-link" onclick="selectCategoryTab('girls')">Girls Collection <i class="fas fa-angle-right"></i></a>
+      <a href="#catalog" class="mobile-nav-link" onclick="selectCategoryTab('boys')">Boys Collection <i class="fas fa-angle-right"></i></a>
+      <a href="#catalog" class="mobile-nav-link" onclick="selectCategoryTab('coord-sets')">Co-ord Sets (Trending) <i class="fas fa-angle-right"></i></a>
+      <a href="#catalog" class="mobile-nav-link" onclick="selectCategoryTab('festive')">Festive & Party Wear <i class="fas fa-angle-right"></i></a>
+      <a href="#lookbook" class="mobile-nav-link">Instagram Lookbook <i class="fas fa-angle-right"></i></a>
+    </div>
+
+    <div style="margin-top: auto; padding-top: 20px;">
+      <a href="https://wa.me/919891138821" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+        <i class="fab fa-whatsapp"></i> WhatsApp Order Line
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       3. HERO SECTION
+       ========================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <i class="fas fa-sparkles"></i>
+          <span>New Festive & Summer 2026 Collection</span>
+        </div>
+
+        <h1 class="hero-title">
+          Trendy, Skin-Friendly <span class="highlight">Kids Fashion</span> That Sparks Joy!
+        </h1>
+
+        <p class="hero-subtitle">
+          Handcrafted bio-wash cotton sets, twirl-ready princess gowns, dapper linen boys sets, and comfy newborn essentials. Loved by 15,000+ happy Indian moms!
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#catalog" class="btn btn-primary">
+            <i class="fas fa-shopping-bag"></i> Explore Collection
+          </a>
+          <a href="https://wa.me/919891138821?text=Hi%20Kidoz!%20I%20would%20love%20to%20see%20your%20latest%20catalogue%20and%20offers." target="_blank" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Chat & Order on WhatsApp
+          </a>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="hero-trust-row">
+          <div class="trust-avatar-group">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Customer Mom" />
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Customer Mom" />
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" alt="Customer Mom" />
+            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=100&q=80" alt="Customer Mom" />
+          </div>
+          <div class="trust-metric-text">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <span><strong>4.9 / 5 Rating</strong> from 15,000+ Happy Families</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-showcase">
+        <div class="hero-main-card">
+          <img src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=900&q=85" alt="Kidoz Kids Fashion Model Outfit" />
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-top-left">
+            <div class="floating-badge-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="floating-badge-text">
+              <span class="floating-badge-title">100% Breathable Cotton</span>
+              <span class="floating-badge-sub">Zero-itch, skin-safe dyes</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <div class="floating-badge-icon green">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <div class="floating-badge-text">
+              <span class="floating-badge-title">Pan-India Express Dispatch</span>
+              <span class="floating-badge-sub">Dispatched in 24 Hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. VALUE PROPS STRIP
+       ========================================== -->
+  <div class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <div class="feature-info">
+            <h4>Free Shipping</h4>
+            <p>On all orders above ₹999</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="feature-info">
+            <h4>Direct WhatsApp Order</h4>
+            <p>1-Click instant assistance</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fas fa-shield-heart"></i>
+          </div>
+          <div class="feature-info">
+            <h4>Skin-Safe Fabrics</h4>
+            <p>Pre-washed & anti-chafing</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fas fa-arrow-rotate-left"></i>
+          </div>
+          <div class="feature-info">
+            <h4>Easy 7-Day Exchange</h4>
+            <p>Zero hassle size swaps</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       5. INSTAGRAM PROFILE SPOTLIGHT BANNER
+       ========================================== -->
+  <div class="container">
+    <div class="instagram-spotlight">
+      <div class="ig-content-left">
+        <div class="ig-avatar">
+          <div class="ig-avatar-inner">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+        <div class="ig-text">
+          <h4>@kidozkidsfashion <i class="fas fa-check-circle ig-verified" title="Official Account"></i></h4>
+          <p>Join our Instagram family! Daily reels, client styling videos & exclusive flash sales.</p>
+        </div>
+      </div>
+      <a href="https://www.instagram.com/kidozkidsfashion?utm_source=qr&exln=YjMzd2YyMmszd2Iz" target="_blank" class="btn-instagram">
+        <i class="fab fa-instagram"></i> Visit Official Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       6. CATALOG & SHOPPING SECTION
+       ========================================== -->
+  <section class="section" id="catalog">
+    <div class="container">
+      
+      <!-- Section Title -->
+      <div class="section-header">
+        <span class="section-tag">Explore The Wardrobe</span>
+        <h2 class="section-title">Handpicked Outfits For Little Trendsetters</h2>
+        <p class="section-desc">Select a category below or order directly with our WhatsApp styling team.</p>
+      </div>
+
+      <!-- Filter Tabs & Toolbar -->
+      <div class="category-filter-wrapper">
+        <div class="category-tabs" id="categoryTabs">
+          <button class="category-tab active" data-category="all">
+            <i class="fas fa-border-all"></i> All Collections
+          </button>
+          <button class="category-tab" data-category="girls">
+            <i class="fas fa-female"></i> Girls Frocks & Tops
+          </button>
+          <button class="category-tab" data-category="boys">
+            <i class="fas fa-male"></i> Boys Sets & Shirts
+          </button>
+          <button class="category-tab" data-category="coord-sets">
+            <i class="fas fa-layer-group"></i> Co-ord Sets
+          </button>
+          <button class="category-tab" data-category="festive">
+            <i class="fas fa-crown"></i> Festive & Party
+          </button>
+          <button class="category-tab" data-category="infants">
+            <i class="fas fa-baby"></i> Newborn & Toddler
+          </button>
+        </div>
+
+        <div class="catalog-toolbar-right">
+          <span class="product-count-badge" id="productCount">Showing styles</span>
+          <select id="sortSelect" class="sort-select" aria-label="Sort products">
+            <option value="popular">Most Popular</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Customer Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Grid (Populated dynamically via products.js & app.js) -->
+      <div class="product-grid" id="productGrid">
+        <!-- Dynamic Cards Injected Here -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. WHY CHOOSE KIDOZ
+       ========================================== -->
+  <section class="section why-kidoz-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Designed with Love</span>
+        <h2 class="section-title">Why Parents Trust Kidoz Kids Fashion</h2>
+        <p class="section-desc">We obsess over comfort so kids can run, jump, nap and giggle without irritation.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-card-icon">
+            <i class="fas fa-feather"></i>
+          </div>
+          <h4>Zero Scratchy Tags</h4>
+          <p>Every garment features smooth printed labels or ultra-soft woven trims. No itchy tags poking delicate infant necks.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-card-icon">
+            <i class="fas fa-shield-virus"></i>
+          </div>
+          <h4>Non-Toxic Bio-Washed Cotton</h4>
+          <p>Our fabrics undergo organic washing to guarantee feather-soft touch, zero harsh chemicals, and no shrinkage after washing.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-card-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h4>1-on-1 WhatsApp Sizing Help</h4>
+          <p>Not sure between size 2-3Y or 3-4Y? Chat directly with our stylists on WhatsApp. We send real garment measurements in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. INSTAGRAM LOOKBOOK GALLERY
+       ========================================== -->
+  <section class="section lookbook-section" id="lookbook">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Real Kids, Real Smiles</span>
+        <h2 class="section-title">Shop The Instagram Lookbook</h2>
+        <p class="section-desc">Tag <strong>@kidozkidsfashion</strong> on Instagram to be featured on our official lookbook wall!</p>
+      </div>
+
+      <div class="lookbook-grid" id="lookbookGrid">
+        <!-- Dynamically rendered via app.js -->
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="https://www.instagram.com/kidozkidsfashion?utm_source=qr&exln=YjMzd2YyMmszd2Iz" target="_blank" class="btn btn-secondary">
+          <i class="fab fa-instagram"></i> View More On Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. SLIDE-OVER CART DRAWER
+       ========================================== -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <!-- Drawer Header -->
+    <div class="cart-drawer-header">
+      <h3><i class="fas fa-shopping-bag" style="color: var(--primary);"></i> Your Bag</h3>
+      <button class="close-drawer-btn" id="closeCartBtn" aria-label="Close cart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Meter -->
+    <div class="free-shipping-meter">
+      <p id="freeShippingText">Add items worth ₹999 for FREE Delivery!</p>
+      <div class="shipping-progress-track">
+        <div class="shipping-progress-bar" id="freeShippingBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Body -->
+    <div class="cart-drawer-body">
+      <div id="cartItemsList">
+        <!-- Cart Items Injected Dynamically -->
+      </div>
+
+      <div class="empty-cart-view" id="emptyCartState" style="display: none;">
+        <div class="emoji">🧸</div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 6px;">Your bag is empty!</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px;">Pick comfortable outfits for your kiddo.</p>
+        <button class="btn btn-primary" onclick="closeCartDrawer(); window.location.href='#catalog';">
+          Start Shopping
+        </button>
+      </div>
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="cart-drawer-footer" id="cartFooter">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">₹0</strong>
+      </div>
+      <div class="cart-summary-line savings">
+        <span>Total Savings</span>
+        <strong id="cartSavings">₹0</strong>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Estimated Total</span>
+        <span id="cartGrandTotal">₹0</span>
+      </div>
+
+      <div class="cart-checkout-actions">
+        <!-- WhatsApp Order Checkout (The client's top requested feature) -->
+        <button class="btn-whatsapp-cart" id="cartWhatsappBtn">
+          <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+        </button>
+        <!-- Standard Quick Checkout Demo Form -->
+        <button class="btn-demo-checkout" id="openCheckoutModalBtn">
+          <i class="fas fa-credit-card"></i> Proceed to Order Form
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       10. QUICK VIEW MODAL
+       ========================================== -->
+  <div class="modal-backdrop" id="quickViewBackdrop"></div>
+  <div class="modal" id="quickViewModal" role="dialog" aria-modal="true">
+    <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close modal">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="quick-view-grid">
+      <!-- Media Gallery -->
+      <div class="qv-gallery">
+        <div class="qv-main-img-box">
+          <img id="qvMainImg" src="" alt="Product main view" />
+        </div>
+        <div class="qv-thumbnails" id="qvThumbnails"></div>
+      </div>
+
+      <!-- Info Details -->
+      <div class="qv-details">
+        <span class="qv-tag" id="qvTag">Bestseller</span>
+        <h2 class="qv-title" id="qvTitle">Product Title</h2>
+        <div class="qv-rating" id="qvRating"></div>
+
+        <div class="qv-pricing">
+          <span class="qv-price" id="qvPrice">₹0</span>
+          <span class="qv-orig-price" id="qvOriginalPrice">₹0</span>
+          <span class="qv-discount" id="qvDiscount">0% OFF</span>
+        </div>
+
+        <p class="qv-description" id="qvDescription">Product description...</p>
+
+        <!-- Fabric & Skin Info -->
+        <div class="qv-fabric-box">
+          <i class="fas fa-shield-alt"></i>
+          <div>
+            <strong style="display: block; font-size: 0.8rem; color: var(--text-dark);">Fabric Specification:</strong>
+            <span id="qvFabric" style="color: var(--text-muted); font-size: 0.82rem;">100% Bio-Wash Cotton</span>
+          </div>
+        </div>
+
+        <!-- Size Selection -->
+        <div class="qv-options-block">
+          <div class="qv-options-header">
+            <span class="qv-options-title">Select Child Size:</span>
+            <span class="size-guide-trigger" id="sizeGuideLink">
+              <i class="fas fa-ruler-combined"></i> Size Chart
+            </span>
+          </div>
+          <div class="size-btn-group" id="qvSizes"></div>
+        </div>
+
+        <!-- Color Options -->
+        <div class="qv-options-block">
+          <span class="qv-options-title" style="display: block; margin-bottom: 8px;">Available Shades:</span>
+          <div class="colors-wrapper" id="qvColors"></div>
+        </div>
+
+        <!-- Actions -->
+        <div class="qv-actions">
+          <button class="btn btn-primary" onclick="addQuickViewToCart()">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+          <button class="btn btn-whatsapp" onclick="orderQuickViewOnWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       11. SIZE GUIDE MODAL
+       ========================================== -->
+  <div class="modal-backdrop" id="sizeGuideBackdrop"></div>
+  <div class="modal" id="sizeGuideModal" style="max-width: 640px;">
+    <button class="modal-close-btn" id="closeSizeGuideBtn">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="size-guide-content">
+      <h3>📏 Kidoz Sizing Chart</h3>
+      <p>Standard measurements for Indian children. If your little one is in between sizes or chubby, we recommend sizing up!</p>
+
+      <div class="size-table-wrapper">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Age Group</th>
+              <th>Chest (inches)</th>
+              <th>Waist (inches)</th>
+              <th>Child Height (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>0-6 Months</strong></td><td>17 - 18"</td><td>17"</td><td>58 - 66 cm</td></tr>
+            <tr><td><strong>6-12 Months</strong></td><td>18 - 19"</td><td>18"</td><td>66 - 74 cm</td></tr>
+            <tr><td><strong>1-2 Years</strong></td><td>20 - 21"</td><td>19.5"</td><td>75 - 86 cm</td></tr>
+            <tr><td><strong>2-3 Years</strong></td><td>21 - 22"</td><td>20.5"</td><td>87 - 96 cm</td></tr>
+            <tr><td><strong>3-4 Years</strong></td><td>22 - 23"</td><td>21"</td><td>97 - 104 cm</td></tr>
+            <tr><td><strong>4-5 Years</strong></td><td>23 - 24"</td><td>21.5"</td><td>105 - 112 cm</td></tr>
+            <tr><td><strong>6-7 Years</strong></td><td>25 - 26"</td><td>23"</td><td>115 - 122 cm</td></tr>
+            <tr><td><strong>8-9 Years</strong></td><td>27 - 28"</td><td>24.5"</td><td>125 - 134 cm</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 20px; background: var(--bg-subtle); padding: 14px; border-radius: var(--radius-md); font-size: 0.85rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+        <span>Need exact measurements? We measure before sending!</span>
+        <a href="https://wa.me/919891138821?text=Hi%20Kidoz!%20Can%20you%20help%20me%20choose%20the%20right%20size%20for%20my%20child?" target="_blank" class="btn btn-whatsapp" style="padding: 6px 14px; font-size: 0.8rem;">
+          <i class="fab fa-whatsapp"></i> Ask Stylist
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       12. DIRECT CHECKOUT MODAL
+       ========================================== -->
+  <div class="modal-backdrop" id="checkoutBackdrop"></div>
+  <div class="modal" id="checkoutModal">
+    <button class="modal-close-btn" id="closeCheckoutBtn">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="checkout-modal-content">
+      <h3>Complete Your Delivery Details</h3>
+      <p class="subtitle">Enter your dispatch address. An order summary is instantly generated for WhatsApp confirmation!</p>
+
+      <form id="checkoutForm">
+        <div class="checkout-layout">
+          <!-- Customer Address Fields -->
+          <div class="checkout-form-fields">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Parent / Receiver Name *</label>
+                <input type="text" id="custName" class="form-input" required placeholder="e.g. Priya Sharma" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">WhatsApp Contact Number *</label>
+                <input type="tel" id="custPhone" class="form-input" required placeholder="e.g. 9876543210" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Delivery Street Address *</label>
+              <textarea id="custAddress" class="form-textarea" rows="2" required placeholder="Flat/House No., Building, Street Name, Landmark"></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">City *</label>
+                <input type="text" id="custCity" class="form-input" required placeholder="e.g. Delhi / Mumbai" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">PIN Code *</label>
+                <input type="text" id="custPincode" class="form-input" required placeholder="e.g. 110001" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Special Instructions (Gift Box, Sizing Note)</label>
+              <input type="text" id="custNotes" class="form-input" placeholder="Optional notes for our packaging team" />
+            </div>
+
+            <!-- Payment Choice -->
+            <div class="form-group">
+              <label class="form-label">Preferred Payment Method</label>
+              <div class="payment-options">
+                <label class="payment-radio-label">
+                  <input type="radio" name="paymentMethod" value="WhatsApp UPI / GPay / PhonePe" checked />
+                  <span>⚡ Instant UPI / GPay / QR (Dispatched in 24 Hrs)</span>
+                </label>
+                <label class="payment-radio-label">
+                  <input type="radio" name="paymentMethod" value="Cash On Delivery (COD)" />
+                  <span>💵 Cash On Delivery (COD)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary Side Panel -->
+          <div class="checkout-summary-box">
+            <h4>Order Summary</h4>
+            <div class="checkout-items-preview" id="checkoutItemsPreview"></div>
+
+            <div class="checkout-summary-row" style="border-top: 1px solid var(--border); padding-top: 10px;">
+              <span>Subtotal:</span>
+              <strong id="modalSubtotal">₹0</strong>
+            </div>
+            <div class="checkout-summary-row">
+              <span>Delivery Fee:</span>
+              <strong id="modalDelivery">FREE</strong>
+            </div>
+            <div class="checkout-summary-row" style="font-size: 1.15rem; font-weight: 800; color: var(--text-dark); border-top: 1px dashed var(--border); padding-top: 8px;">
+              <span>Total Payable:</span>
+              <span id="modalTotal" style="color: var(--primary);">₹0</span>
+            </div>
+
+            <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 18px;">
+              <i class="fab fa-whatsapp"></i> Confirm & Send on WhatsApp
+            </button>
+            <p style="font-size: 0.72rem; color: var(--text-muted); text-align: center; margin-top: 8px;">
+              🔒 Zero risk. Your order will be confirmed directly with our team.
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       13. FLOATING WHATSAPP INTERACTIVE HUB
+       ========================================== -->
+  <div class="floating-whatsapp-hub">
+    <!-- Attention Speech Bubble -->
+    <div class="whatsapp-chat-bubble" id="whatsappChatBubble">
+      <span class="bubble-close-btn" id="closeBubbleBtn"><i class="fas fa-times"></i></span>
+      <div class="bubble-header">
+        <span class="online-dot"></span>
+        <span>Kidoz Kids Fashion Support</span>
+      </div>
+      <p class="bubble-text">
+        Hi there! Need help picking the right size or want custom gift wrapping? We are live! 🌸
+      </p>
+      <div class="bubble-cta" onclick="sendWhatsAppGreeting('Hi Kidoz! I need help selecting outfits for my kid.')">
+        <i class="fab fa-whatsapp"></i> Start WhatsApp Chat
+      </div>
+    </div>
+
+    <!-- Pulsating Green Button -->
+    <button class="floating-whatsapp-btn" id="floatingWhatsappBtn" onclick="sendWhatsAppGreeting()" title="Chat on WhatsApp" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </button>
+  </div>
+
+  <!-- ==========================================
+       14. MOBILE STICKY BOTTOM NAVIGATION
+       ========================================== -->
+  <nav class="mobile-bottom-nav">
+    <a href="#hero" class="mobile-nav-item active">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="#catalog" class="mobile-nav-item">
+      <i class="fas fa-th-large"></i>
+      <span>Shop</span>
+    </a>
+    <a href="#" class="mobile-nav-item cart-toggle-btn">
+      <i class="fas fa-shopping-bag"></i>
+      <span>Bag</span>
+      <span class="cart-badge" style="top: 2px; right: 18px;">0</span>
+    </a>
+    <a href="https://wa.me/919891138821?text=Hi%20Kidoz!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="mobile-nav-item whatsapp-tab">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================
+       15. SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Description -->
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="logo-badge" style="width: 38px; height: 38px; font-size: 1.2rem;">
+              <i class="fas fa-child"></i>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name" style="color: white;">kidoz<span>.</span></span>
+              <span class="brand-tagline" style="color: #9CA3AF;">Kids Fashion</span>
+            </div>
+          </div>
+          <p>
+            Curating India's most lovable, softest, and trendiest children's fashion from toddler days to stylish pre-teens.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/kidozkidsfashion?utm_source=qr&exln=YjMzd2YyMmszd2Iz" target="_blank" class="social-btn" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/919891138821" target="_blank" class="social-btn" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-btn" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Shop Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog" onclick="selectCategoryTab('girls')">Girls Dresses & Frocks</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('boys')">Boys Shirts & Sets</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('coord-sets')">Trending Co-ord Sets</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('festive')">Festive Kurtas & Lehengas</a></li>
+            <li><a href="#catalog" onclick="selectCategoryTab('infants')">Newborn Rompers</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="footerSizeGuide">Size Chart & Guide</a></li>
+            <li><a href="#catalog">Pan-India Shipping Policy</a></li>
+            <li><a href="#catalog">Easy 7-Day Exchange</a></li>
+            <li><a href="https://wa.me/919891138821" target="_blank">Track Order on WhatsApp</a></li>
+            <li><a href="https://wa.me/919891138821" target="_blank">Bulk / Gifting Enquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <strong style="color: white; display: block;">WhatsApp Orders:</strong>
+              <a href="https://wa.me/919891138821" target="_blank" style="color: var(--whatsapp); font-weight: 700;">+91 98911 38821</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fab fa-instagram"></i>
+            <div>
+              <strong style="color: white; display: block;">Instagram DM:</strong>
+              <a href="https://www.instagram.com/kidozkidsfashion?utm_source=qr&exln=YjMzd2YyMmszd2Iz" target="_blank">@kidozkidsfashion</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <span>Mon - Sat: 10:00 AM - 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Kidoz Kids Fashion. All Rights Reserved. Built for client presentation demo.
+        </div>
+        <div style="display: flex; gap: 16px;">
+          <span>100% Secure Checkout</span>
+          <span>•</span>
+          <span>Verified Instagram Seller</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Helper function to jump to tabs from external links -->
+  <script>
+    function selectCategoryTab(category) {
+      const tabs = document.querySelectorAll('.category-tab');
+      tabs.forEach(tab => {
+        if (tab.dataset.category === category) {
+          tab.click();
+        }
+      });
+      const catalog = document.getElementById('catalog');
+      if (catalog) {
+        catalog.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+  <!-- App Data and Controller Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
